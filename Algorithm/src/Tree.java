@@ -1,5 +1,6 @@
 import org.junit.Test;
 
+import java.util.Random;
 import java.util.Stack;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -11,6 +12,21 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 
  class Tree {
+    class Node<T>
+    {
+        public T value;
+        public Node left;
+        public Node right;
+
+        public Node(T value) {
+            this.value = value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
+    }
 
     public void PreOrder(Node head)
     {
@@ -73,16 +89,31 @@ import java.util.concurrent.locks.ReentrantLock;
 
     }
 
-}
+    // 随机生成一颗二叉树
+    private Node RandomCreateBinaryTree(){
+        Random random = new Random();
+        // 树的深度
+        int level = random.nextInt(Bound);
+        if (level == 0) {
+            return null;
+        }
 
-class Node
-{
-    public int value;
-    public Node left;
-    public Node right;
-
-    @Override
-    public String toString() {
-        return String.valueOf(value);
+        int curLevel = 1;
+        Stack<Node> stack = new Stack<>();
+        Node<Integer> head;
+        // 头结点不能为空
+        do {head = RandomCreateNode(random);}while (head == null);
+        stack.push(head);
+        while (!stack.empty()) {
+            Node curNode = stack.pop();
+        }
     }
+
+    // 随机生成一个结点
+    private Node<Integer> RandomCreateNode(Random random){
+        int number = random.nextInt(Bound);
+        return number == 0 ? null : new Node(number);
+    }
+
+    private final int Bound = 100;
 }
