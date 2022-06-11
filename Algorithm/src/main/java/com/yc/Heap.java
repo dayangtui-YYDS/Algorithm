@@ -1,5 +1,5 @@
-/**
- * @ClassName: Heap
+package main.java.com.yc; /**
+ * @ClassName: main.java.com.yc.Heap
  * @Description:
  * @Author: yucongcong
  * @Date: 2022-05-06 11:45
@@ -10,7 +10,7 @@ import org.junit.Test;
 import java.util.*;
 
 /**
- * @ClassName: Heap
+ * @ClassName: main.java.com.yc.Heap
  * @Description:
  * @Author: yucongcong
  * @Date: 2022-05-06 11:45
@@ -230,10 +230,10 @@ class MaxLineCover{
         Heap<Integer> heap = new Heap<Integer>((a,b)->a-b);
         for (Line line : lines) {
             if (!heap.Push(line.End, false)) {
-                System.out.println("Heap Push fail");
+                System.out.println("main.java.com.yc.Heap Push fail");
             }
 
-            assert  heap.Push(line.End,false) :"Heap Push fail";
+            assert  heap.Push(line.End,false) :"main.java.com.yc.Heap Push fail";
             while (!heap.IsEmpty() && heap.Peek() <= line.Start) {
                 heap.Pop(false);
             }
@@ -282,7 +282,7 @@ class MaxLineCover{
             int expect = MaxLineCoverEnmu(lines);
             if (actual != expect) {
                 assert actual== expect;
-                System.out.println(String.format("MaxLineCover error: actual:%d expect:%d",actual,expect));
+                System.out.println(String.format("main.java.com.yc.MaxLineCover error: actual:%d expect:%d",actual,expect));
                 for (Line line : lines) {
                     System.out.println(line.toString()+"\t");
                 }

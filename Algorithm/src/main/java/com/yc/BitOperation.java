@@ -1,3 +1,5 @@
+package main.java.com.yc;
+
 import org.junit.Test;
 
 import java.lang.reflect.Array;
