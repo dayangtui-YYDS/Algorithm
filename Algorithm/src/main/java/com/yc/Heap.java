@@ -1,4 +1,4 @@
-package main.java.com.yc; /**
+package com.yc; /**
  * @ClassName: main.java.com.yc.Heap
  * @Description:
  * @Author: yucongcong

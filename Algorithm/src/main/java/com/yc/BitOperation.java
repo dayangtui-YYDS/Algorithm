@@ -1,4 +1,4 @@
-package main.java.com.yc;
+package com.yc;
 
 import org.junit.Test;
 

@@ -1,2 +1,3 @@
-package com.yc;public class KMP {
+package com.yc;
+public class KMP {
 }

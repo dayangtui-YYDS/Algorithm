@@ -1,4 +1,4 @@
-package main.java.com.yc;
+package com.yc;
 
 import org.junit.Test;
 
@@ -258,7 +258,7 @@ import java.util.Stack;
 class Demo
 {
     @Test
-    public static void main(String[] args) {
+    public void Test() {
         BinaryTree binaryTree = new BinaryTree();
         binaryTree.RandomCreateBinaryTree();
         System.out.println(binaryTree);

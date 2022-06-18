@@ -1,8 +1,4 @@
-package main.java.com.yc;
-
-import org.junit.Test;
-
-import java.util.Random;
+package com.yc;
 
 /**
  * @ClassName: LongestCommonSubsequence
@@ -12,6 +8,7 @@ import java.util.Random;
  */
 // 最长公共子序列问题
 public class LongestCommonSubsequence {
+
     public static int LongestCommonSubsequence(String str1, String str2){
         // base case
         if (str1 == null || str2 == null || str1.length() == 0 || str2.length() == 0) return 0;
@@ -42,41 +39,4 @@ public class LongestCommonSubsequence {
         }
         return dp[m-1][n-1];
     }
-}
-
-class LongestCommonSubsequenceTestCase
-{
-    // 生成样本
-    private String CreateSample()
-    {
-        // 英文字母数量
-        int letterCount = 26;
-        int numberCount = 10;
-        char[] sample = new char[letterCount<<1 + numberCount];
-        // 生成小写字母
-        char low = 'a';
-        for (int i=0; i< letterCount; ++i){
-            sample[i] = (char) (low + i);
-        }
-        // 生成大写字母
-        char upper = 'A';
-        for (int i=0; i< letterCount; ++i){
-            sample[i] = (char) (upper + i);
-        }
-        //生成数字
-        int number = 0;
-        for (int i=0; i< letterCount; ++i){
-            sample[i] = (char) (number + i);
-        }
-        return sample.toString();
-    }
-
-    @Test
-    public void Test(){
-        String sample = CreateSample();
-    }
-
-    private final int Bound = 20;
-    // 随机数
-    private final Random random = new Random();
 }
