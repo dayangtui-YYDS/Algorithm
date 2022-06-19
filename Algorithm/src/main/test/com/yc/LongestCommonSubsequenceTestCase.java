@@ -24,6 +24,8 @@ public class LongestCommonSubsequenceTestCase {
             String str2 = CreateString(sample);
             System.out.println(String.format("Str1: %s  Str2: %s LCS: %d",str1, str2,
                     LongestCommonSubsequence.LongestCommonSubsequence(str1,str2)));
+            System.out.println(String.format("Str1: %s  Str2: %s LCS: %d",str1, str2,
+                    LongestCommonSubsequence.LongestCommonSubsequenceRecur(str1,str2)));
         }
     }
 
