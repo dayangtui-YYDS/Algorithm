@@ -1,9 +1,4 @@
-package com.yc; /**
- * @ClassName: LongestCommonSubsequenceTestCase
- * @Description:
- * @Author: yucongcong
- * @Date: 2022-06-18 16:04
- */
+package com.yc;
 import org.junit.Test;
 
 import java.util.Random;
